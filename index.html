@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Дәріхана</title>
+  <style>
+    /* Негізгі стилдер */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    main {
+      padding: 20px;
+      background-color: white;
+      margin: 20px;
+      border-radius: 8px;
+    }
+
+    .medicine-list {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .medicine {
+      background-color: #ffffff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      width: 30%;
+      text-align: center;
+    }
+
+    .medicine h4 {
+      font-size: 18px;
+      color: #333;
+    }
+
+    .medicine p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    .buy-btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .buy-btn:hover {
+      background-color: #45a049;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Дәріхана</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Басты бет</a></li>
+        <li><a href="#">Дәрілер</a></li>
+        <li><a href="#">Байланыс</a></li>
+        <li><a href="#">Жәрдем</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Дәрілер тізімі</h2>
+      <p>Біздің дәріханадан табылатын негізгі дәрілер.</p>
+    </section>
+
+    <section class="medicines">
+      <h3>Дәрілер</h3>
+      <div class="medicine-list">
+        <div class="medicine">
+          <h4>Парацетамол</h4>
+          <p>Құны: 500 тг</p>
+          <button class="buy-btn">Сатып алу</button>
+        </div>
+        <div class="medicine">
+          <h4>Ибупрофен</h4>
+          <p>Құны: 700 тг</p>
+          <button class="buy-btn">Сатып алу</button>
+        </div>
+        <div class="medicine">
+          <h4>Анальгин</h4>
+          <p>Құны: 300 тг</p>
+          <button class="buy-btn">Сатып алу</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Дәріхана © 2024</p>
+  </footer>
+
+  <script>
+    // Барлық сатып алу түймелеріне оқиғалар қосу
+    const buyButtons = document.querySelectorAll('.buy-btn');
+
+    buyButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        alert('Дәрі сатып алынды!');
+      });
+    });
+  </script>
+</body>
+</html>
